@@ -1,0 +1,14 @@
+#Training------------------------------------
+#1.load the data(excel sheet)
+import pandas as pd
+file=pd.read_csv("/content/irisexcel.csv")
+x=file[["sepal_length","sepal_width","petal_length","petal_width"]]
+y=file["species"]
+#2.load the model
+from sklearn.linear_model import Perceptron
+a=Perceptron()
+#3.Fit data into the model
+a.fit(x,y)
+#Testing-------------------------------------predict
+op=a.predict([[1.2,6.5,8,4.3]])
+print(op)

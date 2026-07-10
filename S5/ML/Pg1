@@ -1,0 +1,13 @@
+#Training------------------------------------
+#1.load the data(our own data)
+x=[[2,3],[90,78,],[5,8],[73,43],[37,62]]
+y=["Cat","Dog","Tiger","Dog","Cat"]
+#2.load the model
+from sklearn.linear_model import Perceptron
+a=Perceptron()
+#3.Fit data into the model
+a.fit(x,y)
+#Testing-------------------------------------predict
+op=a.predict([[84,5]])
+print(op)
+     
